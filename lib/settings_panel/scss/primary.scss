@@ -1,0 +1,662 @@
+/*
+Custom Styles written for the  Theme Panel
+Author: Michael Clesceri
+Author Site: http://webworkerme.com
+*/
+
+//Set up some Variables
+$primary_sans: 'Raleway';
+$secondary_sans: 'Questrial';
+$primary_color: #2e3339;
+//$primary_color_rgb: 46,51,57;
+
+//Import some stuff
+@import "framework-grid/foundation";
+@import "framework-grid/normalize";
+
+//Font Awesome
+@import "icons";
+
+
+//Remove Some Minor WordPress Defaults
+#wpcontent
+{
+padding: 0;
+}
+#wpbody-content
+{
+background: #ffffff url(../images/man_bg.jpg) no-repeat center top;
+background-attachment: fixed;
+background-size: auto 100%;
+min-height: 1000px;
+
+}
+/*----------------------
+*   Intro Animations   *
+----------------------*/
+.im_still_loading
+{
+	opacity: 0!important;
+	//Make sure that some elements stay still as the page loads. 
+	.section
+	{
+		-webkit-transition: all 0ms ease-in-out!important;
+		-moz-transition: all 0ms ease-in-out!important;
+		-ms-transition: all 0ms ease-in-out!important;
+		-o-transition: all 0ms ease-in-out!important;
+		transition: all 0ms ease-in-out!important;
+	}
+	.primary_button, .secondary_button
+	{
+		-webkit-transition: all 0ms ease-in-out!important;
+		-moz-transition: all 0ms ease-in-out!important;
+		-ms-transition: all 0ms ease-in-out!important;
+		-o-transition: all 0ms ease-in-out!important;
+		transition: all 0ms ease-in-out!important;}
+}
+//And Begin Styling the Options Panel.
+#optionsframework-wrap
+{
+	position: relative;
+	opacity: 1;
+	//Use my choice of fonts, and remove the margin
+	font-family: $secondary_sans;
+	margin: -15px 0 0 0;
+	background: transparent;
+	padding: 0 0 0 225px!important;
+	-webkit-transition: all 500ms ease-in-out;
+	-moz-transition: all 500ms ease-in-out;
+	-ms-transition: all 500ms ease-in-out;
+	-o-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;
+	-webkit-transition-delay: .5s;
+	transition-delay: .5s;
+	//Reset the max-width
+	#optionsframework
+	{
+		max-width: 100%;
+		background: transparent;
+	}
+
+	//Set up the Main " Settings" Title
+	h2:first-child
+	{
+		color: #171717;
+		font: 300 38px/32px "Raleway", sans-serif;
+		position: relative;
+		padding: 20px 0 10px 0px;
+		position: fixed;
+		z-index: 3;
+		left: 160px;
+		display: block;
+		width: 225px;
+		text-align: center;
+	}
+	//Set up the Nav-Titles
+	.nav-tab-wrapper
+	{
+		padding: 0;
+		background: rgba(241,241,241, 0.9);
+		width: 225px;
+		height: 100%;
+		position: fixed;
+		left: 160px;
+		top: 0;
+		bottom: 0;
+		z-index: 2;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		text-align: Center;
+		-webkit-box-shadow: 0 0 3px 0 rgba(0,0,0,0.4);
+				box-shadow: 0 0 3px 0 rgba(0,0,0,0.4);
+		a
+		{
+			margin: 0;
+			border: 0;
+			display: block;
+			width: 100%;
+			color: #777777;
+			background: transparent;
+			font: 500 14px/42px $primary_sans, sans-serif;
+			-webkit-box-sizing: 0;
+			-moz-box-sizing: 0;
+			box-sizing: 0;
+			border-width: 1px 1px 1px 0;
+			letter-spacing: 2px;
+			-webkit-transition: all 500ms ease-in-out;
+			-moz-transition: all 500ms ease-in-out;
+			-ms-transition: all 500ms ease-in-out;
+			-o-transition: all 500ms ease-in-out;
+			transition: all 500ms ease-in-out;
+		}
+		a.nav-tab-active, a:hover
+		{
+			background: #e6e6e6;
+			color: #000000;
+			-webkit-transition: all 100ms ease-in;
+			-moz-transition: all 100ms ease-in;
+			-ms-transition: all 100ms ease-in;
+			-o-transition: all 100ms ease-in;
+			transition: all 100ms ease-in;
+		}
+	}
+	//Now Work on the interior of the panel
+	#optionsframework-metabox
+	{
+		padding: 0;
+
+		#optionsframework
+		{
+			border: 0;
+
+		}
+		.row
+		{
+			padding: 0 15px;
+			margin: 15px 0;
+			.hidden
+			{
+				opacity: 0!important;
+				margin: -100% 0 0 0!important;
+				pointer-events: none;
+			}
+
+			.section
+			{
+				padding: 15px 20px;
+				margin: 0;
+				position: relative;
+				display: block;
+				height: auto;
+				opacity: 1;
+				left: 0;
+				-webkit-transition: all 500ms ease-in-out;
+				-moz-transition: all 500ms ease-in-out;
+				-ms-transition: all 500ms ease-in-out;
+				-o-transition: all 500ms ease-in-out;
+				transition: all 500ms ease-in-out;
+				.section_inner
+				{
+					display: block;
+					width: 100%;
+					vertical-align: middle;
+					background: transparent;
+					border: 1px solid #cacaca;
+					-webkit-box-shadow: 0 0 3px 0 rgba(0,0,0,0.1);
+					box-shadow: 0 0 3px 0 rgba(0,0,0,0.1);
+					-webkit-border-radius: 4px;
+					border-radius: 4px;
+					position: relative;
+				}
+
+				h4
+				{
+					margin: 0;
+					padding: 10px 20px;
+					text-align: left!important;
+					font: 500 16px/32px $primary_sans, sans-serif;
+					text-align: center;
+					-webkit-border-radius: 4px;
+					border-radius: 4px;
+					background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 18%, rgba(255,255,255,0.7) 70%, rgba(255,255,255,0.7) 100%); /* FF3.6+ */
+					background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(18%,rgba(255,255,255,1)), color-stop(70%,rgba(255,255,255,0.7)), color-stop(100%,rgba(255,255,255,0.7))); /* Chrome,Safari4+ */
+					background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 18%,rgba(255,255,255,0.7) 70%,rgba(255,255,255,0.7) 100%); /* Chrome10+,Safari5.1+ */
+					background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 18%,rgba(255,255,255,0.7) 70%,rgba(255,255,255,0.7) 100%); /* Opera 11.10+ */
+					background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 18%,rgba(255,255,255,0.7) 70%,rgba(255,255,255,0.7) 100%); /* IE10+ */
+					background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 18%,rgba(255,255,255,0.7) 70%,rgba(255,255,255,0.7) 100%); /* W3C */
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1f1f1', endColorstr='#b3f1f1f1',GradientType=0 ); /* IE6-9 */
+					-webkit-box-shadow: 0 0 3px 0 rgba(0,0,0,0.1);
+					box-shadow: 0 0 3px 0 rgba(0,0,0,0.1);
+					position: relative;
+					text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+					color: #171717;
+					border-bottom: #cacaca solid 1px;
+					text-indent: 52px;
+				}
+				h4::before
+				{
+					content: '\f0da';
+					position: absolute;
+					left: 0;
+					top: 0;
+					bottom: 0;
+					width: 52px;
+					background: rgba(241,241,241,0.8);
+					color: #171717;
+					font-family: "FontAwesome";
+					line-height: 52px;
+					text-shadow: 0px 0px 3px rgba(0,0,0,0.7);
+					text-align: center;
+					text-indent: 0;
+					border-right: 1px solid #cacaca;
+				}
+				.option
+				{
+					display: inline-block;
+					width: 100%;
+					background: rgba(241,241,241,0.7);
+					padding: 30px 0;
+					.controls
+					{
+						display: inline-block;
+						width: 100%;
+						text-align: center;
+						font-size: 0;
+						position: relative;
+						input.upload
+						{
+							width: 60%;
+							margin: 0 ;
+							padding: 10px 0;
+							text-indent: 20px;
+							font: 300 16px/16px $primary_sans, sans-serif;
+							-webkit-border-radius: 4px 0 0 4px;
+							border-radius: 4px 0 0 4px;
+							background: rgba(255,255,255,0.7);
+							color: #171717;
+							border: solid #cacaca;
+							border-width: 1px 0 1px 1px;
+							-webkit-box-shadow: 0 0 0 #000000!important;
+							box-shadow: 0 0 0 #000000!important;
+						}
+						input.upload-button, input.remove-file, input[type="text"]
+						{
+							padding: 11px 20px 12px 20px;
+							font: 300 16px/20px $primary_sans, sans-serif;
+							color: #171717;
+							background: #ffffff;
+							height: auto;
+							border: solid #cacaca;
+							border-width: 1px;
+							-webkit-box-shadow: 0 0 0 #000000!important;
+							box-shadow: 0 0 0 #000000!important;
+							-webkit-border-radius: 4px;
+							border-radius:4px;
+							margin: 0;
+							-webkit-transition: all 500ms ease-in-out;
+							-moz-transition: all 500ms ease-in-out;
+							-ms-transition: all 500ms ease-in-out;
+							-o-transition: all 500ms ease-in-out;
+							transition: all 500ms ease-in-out;
+						}
+						input.upload-button, input.remove-file, .wp-color-result::after
+						{
+							background: #f1f1f1;
+							-webkit-transition: all 500ms ease-in-out;
+							-moz-transition: all 500ms ease-in-out;
+							-ms-transition: all 500ms ease-in-out;
+							-o-transition: all 500ms ease-in-out;
+							transition: all 500ms ease-in-out;
+						}
+						input.upload-button:hover, input.remove-file:hover, .wp-color-result:hover::after
+						{
+							background: #ffffff;
+							-webkit-transition: all 500ms ease-in-out;
+							-moz-transition: all 500ms ease-in-out;
+							-ms-transition: all 500ms ease-in-out;
+							-o-transition: all 500ms ease-in-out;
+							transition: all 500ms ease-in-out;
+						}
+						.screenshot
+						{
+							img
+							{
+								max-width: 90%;
+								height: auto;
+								display: block;
+								margin: 20px auto;
+								background: rgba(0,0,0,0.5);
+							
+							}
+						}
+						.remove-image
+						{
+							display: none;
+						}
+						.wp-picker-container
+						{
+							width: 90%;
+							display: inline-block;
+							position: relative;
+							a
+							{
+								width: 100%;
+								margin: 0;
+								height: 42px;
+								border: 1px solid #cacaca;
+							}
+							a::after
+							{
+								width: 50%;
+								right: 0;
+								position: absolute;
+								font: 300 16px/16px $primary_sans;
+								padding: 12px 0;
+							}
+							.wp-picker-holder
+							{
+								position: absolute;
+								top: -6px;
+								left: 0px;
+								z-index: 2;
+								display: inline-block;
+								width: auto;
+								.iris-square-value
+								{
+									border: 0;
+									width: 12px;
+									height: 12px;
+									outline: 0!important;
+									.iris-square-handle
+									{
+										position: absolute;
+										left: 0;
+										top: 0;
+									}
+								}
+							}
+							.wp-picker-input-wrap
+							{
+								position: absolute;
+								left: 0;
+								top: -40px;
+								z-index: 3;
+								input[type="text"]
+								{
+									width: 169px;
+									font-family: $primary_sans;
+									font: 16px/20px $primary_sans, sans-serif;
+								}
+								input[type="button"]
+								{
+									font: 16px/23px $primary_sans, sans-serif;
+									margin: 0;
+									padding: 10px 23px;
+									height: auto;
+								}
+							}
+							
+						}
+						label
+						{
+							font: 16px/26px $primary_sans, sans-serif;
+							display: block;
+							padding: 10px 0 20px 0;
+						}
+						select
+						{
+							width: 90%;
+							margin: 0 auto;
+							font: 300 16px/16px $primary_sans;
+							-webkit-border-radius: 4px;
+							border-radius: 4px;
+							height: 42px;
+							padding: 8px 10px;
+							text-align: center;
+							option
+							{
+								text-align: center;
+							}
+						}
+						.wp-picker-holder
+						{
+							position: absolute;
+							width: 100%;
+							.iris-picker-inner
+							{
+								width: 100%;
+								.iris-strip
+								{
+									max-height: 100%;
+								}
+							}
+						}
+						input.checkbox
+						{
+							display: block;
+							margin: 0 auto;
+							
+						}
+						/* 
+						The Following checkbox styles are
+						Thanks to http://codepen.io/CreativeJuiz/pen/BiHzp
+						*/
+						/* Base for label styling */
+						input.checkbox:not(:checked),
+						input.checkbox:checked {
+						  position: absolute;
+						  left: -9999px;
+
+						}
+						/* checkbox aspect */
+						input.checkbox:not(:checked) + label:before,
+						{
+							content: '\f00c';
+							font-family: 'FontAwesome';
+							font-size: 32px;
+							line-height: 41px;
+							text-align: center;
+							position: relative;
+							left:0; 
+							top: 0px;
+							right: 0;
+							margin: 0 auto 20px auto;
+							display: block;
+							width: 42px;
+							height: 42px;
+							border: 1px solid #aaa;
+							background: #f8f8f8;
+							border-radius: 3px;
+							color: transparent;
+							box-shadow: inset 0 1px 3px rgba(0,0,0,.3);
+							-moz-transition: all 500ms ease-in-out;
+							-ms-transition: all 500ms ease-in-out;
+							-o-transition: all 500ms ease-in-out;
+							transition: all 500ms ease-in-out;
+						}
+						/* checked mark aspect */
+						input.checkbox:checked + label:before
+						{
+							content: '\f00c';
+							font-family: 'FontAwesome';
+							font-size: 32px;
+							line-height: 41px;
+							text-align: center;
+							display: block;
+							margin: 0 auto 20px auto;
+							width: 42px;
+							height: 42px;
+							border: 1px solid #aaa;
+							background: #f8f8f8;
+							border-radius: 3px;
+							color: #171717;
+							box-shadow: inset 0 1px 3px rgba(0,0,0,.3);
+							-webkit-transition: all 500ms ease-in-out;
+							-moz-transition: all 500ms ease-in-out;
+							-ms-transition: all 500ms ease-in-out;
+							-o-transition: all 500ms ease-in-out;
+							transition: all 500ms ease-in-out;
+						}
+						/* disabled checkbox */
+						input.checkbox:disabled:not(:checked) + label:before,
+						input.checkbox:disabled:checked + label:before {
+						  box-shadow: none;
+						  border-color: #bbb;
+						  background-color: #ddd;
+						}
+						input.checkbox:disabled:checked + label:after {
+						  color: #999;
+						}
+						input.checkbox:disabled + label {
+						  color: #aaa;
+						}
+						/* accessibility */
+						input.checkbox:checked:focus + label:before,
+						input.checkbox:not(:checked):focus + label:before {
+						  border: 1px dotted blue;
+						}
+
+						/* hover style just for information */
+					}
+					.explain
+					{
+						padding: 20px;
+						text-align: center;
+						font: 16px/32px $primary_sans, sans-serif;
+						color: #171717;
+						display: block;
+						margin: 0 auto;
+					}
+					input[type="text"]
+					{
+					width: 90%;
+					}
+				}/*--/.option--*/
+			}/*--/.section--*/
+		}/*--/.row--*/
+	}/*--/#optionsframework-metabox--*/
+	#setting-error-save_options
+	{
+		max-width: 75rem;
+		padding: 0;
+		margin: 20px 35px 20px 30px;
+		border-bottom: 0;
+		-webkit-box-shadow: 0 0 0 rgba(0,0,0,0);
+		box-shadow: 0 0 0 rgba(0,0,0,0);
+		background: transparent;
+		-webkit-border-radius: 4px;
+		border-radius: 4px;
+		p
+		{
+			padding: 0 0 0 52px;
+			margin: 0 65px 0 0;
+			font: 300 16px/52px $primary_sans, sans-serif;
+			border: 1px solid #cacaca;
+			-webkit-box-shadow: 0 0 3px 0 rgba(0,0,0,0.1);
+			box-shadow: 0 0 3px 0 rgba(0,0,0,0.1);
+			-webkit-border-radius: 4px;
+			border-radius: 4px;
+			position: relative;
+			text-indent: 20px;
+			background: rgba(241,241,241,0.7);
+		}
+		p::before
+		{
+			content: '\f0da';
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			width: 52px;
+			background: rgba(217,217,217,0.8);
+			color: #171717;
+			font-family: "FontAwesome";
+			line-height: 52px;
+			text-shadow: 0px 0px 3px rgba(0,0,0,0.7);
+			text-align: center;
+			text-indent: 0;
+			border-right: 1px solid #cacaca;
+		}
+		strong
+		{
+			font-weight: 300;
+		}
+	}
+
+}/*--/#optionsframework-wrap--*/
+#optionsframework-submit
+{
+	text-align: right;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+	max-width: 75rem;
+	padding: 0 35px 0 30px!important;
+	input[type="submit"].primary_button
+	{
+		background: #171717;
+		padding: 10px 30px;
+		font: 300 16px/32px $primary_sans, sans-serif;
+		color: #ffffff;
+		height: auto!important;
+		border: 1px solid #171717;
+		-webkit-border-radius: 4px;
+		border-radius: 4px;
+		-webkit-transition: all 500ms ease-in-out;
+		-moz-transition: all 500ms ease-in-out;
+		-ms-transition: all 500ms ease-in-out;
+		-o-transition: all 500ms ease-in-out;
+		transition: all 500ms ease-in-out;
+	}
+		input[type="submit"].primary_button:hover
+		{
+			background: #444444;
+
+		}
+	input[type="submit"].secondary_button
+	{
+		background: #e6e6e6;
+		padding: 10px 30px;
+		font: 300 16px/32px $primary_sans, sans-serif;
+		color: #171717;
+		border: 1px solid #cacaca;
+		-webkit-border-radius: 4px;
+		border-radius: 4px;
+		height: auto!important;
+		-webkit-transition: all 500ms ease-in-out;
+		-moz-transition: all 500ms ease-in-out;
+		-ms-transition: all 500ms ease-in-out;
+		-o-transition: all 500ms ease-in-out;
+		transition: all 500ms ease-in-out;
+	}
+		input[type="submit"].secondary_button:hover
+		{
+			background: #cacaca;
+		}
+}
+#wpfooter
+{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+	max-width: 75rem;
+	padding: 0 35px 0 30px!important;
+	#footer-left
+	{
+		padding: 0 0 0 70px;
+	}
+}
+/*----------------------------
+--Header Targetted Specifics--
+----------------------------*/
+@media screen and (min-width: 40.063em){
+
+	//Header Options -> Primary Logo and Secondary Logo
+	#section-header_primary_logo.large-6, #section-header_secondary_logo.large-6
+	{
+		.option
+		{
+			height: 265px;
+			img
+			{
+				height: 80px!important;
+				width: auto;
+			}
+		}
+	}
+
+	//Header Options -> Topbar Color, Repeat, Position, Accent
+	.large-6
+	{
+		.option
+		{
+			height: 200px;
+		}
+	}
+
+}

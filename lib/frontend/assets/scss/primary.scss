@@ -1,0 +1,29 @@
+/*!
+Theme Name:         [Project Name]
+Description:        This theme was custom built, by WebworkerMe, for use by [Client]
+Version:            1.0.0
+Author:             WebworkerMe
+Author URI:         http://webworkerme.com
+
+License:            MIT License
+License URI:        http://www.opensource.org/licenses/mit-license.php
+*/
+//Setup the variables;
+@import 'parts/variables';
+
+//Enqueue FontAwesome
+@import 'parts/fontawesome';
+
+//Enqueue Fonts
+@import 'parts/fonts';
+
+//Enqueue Foundation
+@import 'parts/foundation';
+@import 'parts/normalize';
+
+//Theme Cores
+@import 'parts/wordpress';
+@import 'parts/owl';
+@import 'parts/header';
+@import 'parts/typography';
+

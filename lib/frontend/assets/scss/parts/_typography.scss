@@ -1,0 +1,76 @@
+.mainfont
+{
+	&.entry-main
+	{
+		padding: 0 40px;
+	}
+	h2
+	{
+		font: 42px/63px $primary_sans, sans-serif;
+		color: #134289;
+		margin: 15px 0 0 0;
+		&.entry-title
+		{
+			margin: 20px 0;
+		}
+	}
+	h3
+	{
+		font: 36px/54px $primary_sans, sans-serif;
+		color: #134289;
+		margin: 15px 0 0 0;
+	}
+	h4
+	{
+		font: 30px/45px $primary_sans, sans-serif;
+		color: #134289;
+		margin: 15px 0 0 0;
+	}
+	h5
+	{
+		font: 24px/36px $primary_sans, sans-serif;
+		color: #134289;
+		margin: 15px 0 0 0;
+	}
+	h6
+	{
+		font: 18px/27px $primary_sans, sans-serif;
+		color: #134289;
+		margin: 15px 0 0 0;
+	}
+	p, li
+	{
+		font: 16px/26px $primary_sans, sans-serif;
+		color: #050505;
+		margin: 15px 0 0 0;
+	}
+	p
+	{
+		text-align: justify;
+	}
+	a
+	{
+		color: #134289;
+		text-decoration: none;
+	}
+	blockquote
+	{
+		padding: 20px;
+		box-shadow: 0 0 5px 1px rgba(0,0,0,0.1);
+		-webkit-box-shadow: 0 0 5px 1px rgba(0,0,0,0.1);
+		background: #ffffff;
+		border: 1px solid #d1d1d1;
+		margin: 15px 0;
+		background: #e1e1e1;
+		p
+		{
+			margin: 0;
+		}
+	}
+	hr
+	{
+		background: #cacaca;
+		border: 0;
+		height: 1px;
+	}
+}
